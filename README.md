@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Football Dashboard with Next.js and Jotai
+
+A real-time football match dashboard built with Next.js and Jotai for state management. Track scores, player statistics, and match events in an interactive interface.
+
+## Demo
+
+<img src="./public/readme.png" alt="demo" width="600" />
+
+## Features
+
+- Real-time match scoreboard
+- Player statistics tracking (goals and assists)
+- Individual player cards with action buttons
+- Global state management with Jotai
+- Responsive design with Tailwind CSS
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Jotai](https://jotai.org/) - Primitive and flexible state management
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [ESLint](https://eslint.org/) - Code linting
+- [Prettier](https://prettier.io/) - Code formatting
 
 ## Getting Started
 
@@ -16,21 +39,26 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│ ├── layout.tsx # Root layout with Jotai Provider
+│ ├── page.tsx # Main dashboard page
+│ └── globals.css # Global styles
+├── atoms/
+│ └── footballAtoms.ts # Jotai atoms for state management
+├── components/
+│ ├── PlayerCard.tsx # Individual player statistics
+│ └── Scoreboard.tsx # Match scoreboard
+└── public/
+```
 
-## Learn More
+## State Management
 
-To learn more about Next.js, take a look at the following resources:
+This project uses Jotai for state management, featuring:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Atom families for player statistics
+- Derived atoms for total score calculations
+- Write-only atoms for reset functionality
+- Global match state management
