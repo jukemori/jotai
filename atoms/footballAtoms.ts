@@ -21,8 +21,8 @@ export const playerStatAtom = atomFamily((playerId: number) =>
 // Base atoms
 export const startingXIAtom = atom<Player[]>([
   { id: 1, name: "Messi", position: "FW" },
-  { id: 2, name: "De Jong", position: "MF" },
-  { id: 3, name: "Piqué", position: "DF" },
+  { id: 2, name: "Ronaldo", position: "FW" },
+  { id: 3, name: "Mbappe", position: "FW" },
 ]);
 
 // Derived read-only atom
@@ -60,7 +60,7 @@ export const resetAllAtom = atom(null, (get, set) => {
   set(matchScoreAtom, "reset");
   set(startingXIAtom, [
     { id: 1, name: "Messi", position: "FW" },
-    { id: 2, name: "De Jong", position: "MF" },
-    { id: 3, name: "Piqué", position: "DF" },
+    { id: 2, name: "Ronaldo", position: "FW" },
+    { id: 3, name: "Mbappe", position: "FW" },
   ]);
 });
