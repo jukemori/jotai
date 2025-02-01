@@ -1,4 +1,3 @@
-// src/atoms/soccerAtoms.ts
 import { atom } from "jotai";
 import { atomFamily } from "jotai/utils";
 
@@ -56,7 +55,7 @@ export const matchScoreAtom = atom(
 );
 
 // Reset all functionality
-export const resetAllAtom = atom(null, (get, set) => {
+export const resetAllAtom = atom(null, (_get, set) => {
   set(matchScoreAtom, "reset");
   set(startingXIAtom, [
     { id: 1, name: "Messi", position: "FW" },

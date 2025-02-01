@@ -1,4 +1,3 @@
-// src/components/Scoreboard.tsx
 "use client";
 
 import { useAtom } from "jotai";

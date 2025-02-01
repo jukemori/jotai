@@ -1,4 +1,3 @@
-// src/components/PlayerCard.tsx
 "use client";
 
 import { useAtom } from "jotai";
